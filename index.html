@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6">
+        <h1 class="text-2xl font-bold text-center text-blue-700 mb-6">Shipment Management System</h1>
+
+        <form id="shipmentForm" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="md:col-span-2">
+                    <label for="shipmentNo" class="block text-sm font-medium text-gray-700">Shipment No. *</label>
+                    <input type="text" id="shipmentNo" name="shipmentNo" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="description" class="block text-sm font-medium text-gray-700">Description *</label>
+                    <input type="text" id="description" name="description" disabled required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label for="source" class="block text-sm font-medium text-gray-700">Source *</label>
+                    <input type="text" id="source" name="source" disabled required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label for="destination" class="block text-sm font-medium text-gray-700">Destination *</label>
+                    <input type="text" id="destination" name="destination" disabled required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label for="shippingDate" class="block text-sm font-medium text-gray-700">Shipping Date *</label>
+                    <input type="date" id="shippingDate" name="shippingDate" disabled required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label for="expectedDeliveryDate" class="block text-sm font-medium text-gray-700">Expected Delivery
+                        Date *</label>
+                    <input type="date" id="expectedDeliveryDate" name="expectedDeliveryDate" disabled required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+
+            <div class="flex justify-between pt-4">
+                <button type="button" id="saveBtn" disabled
+                    class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 opacity-50 cursor-not-allowed">
+                    Save
+                </button>
+                <button type="button" id="updateBtn" disabled
+                    class="px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 opacity-50 cursor-not-allowed">
+                    Update
+                </button>
+                <button type="reset" id="resetBtn" disabled
+                    class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 opacity-50 cursor-not-allowed">
+                    Reset
+                </button>
+            </div>
+        </form>
+
+        <div id="message" class="mt-4 hidden text-center font-medium p-2 rounded-md"></div>
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
