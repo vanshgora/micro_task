@@ -42,7 +42,8 @@ The system allows users to add, update, validate, and reset shipment details eas
 
 ## Illustrations
 Application Screenshot:  
-*(Insert a screenshot of your application here)*  
+![Shipment Management Screenshot](demo.png)
+
 
 ---
 
